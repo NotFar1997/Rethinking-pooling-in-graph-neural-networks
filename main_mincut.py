@@ -80,11 +80,11 @@ for epoch in range(1, args.max_epochs + 1):
 
     # validation
     val_acc, val_sup_loss, val_lp_loss, val_entropy_loss \
-        = evaluate(model, val_loader, device, evaluator=evaluator)
+        = evaluate(model, val_loader, device)
 
     # test
     test_acc, test_sup_loss, test_lp_loss, test_entropy_loss = \
-        evaluate(model, test_loader, device, evaluator=evaluator)
+        evaluate(model, test_loader, device)
 
     val_accuracies.append(val_acc)
     test_accuracies.append(test_acc)
